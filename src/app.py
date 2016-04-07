@@ -8,7 +8,7 @@ redis = Redis(host='redis', port=6379)
 def hello():
     redis.incr('hits')
 
-    return 'Hi!World I have been show %s times.'  % redis.get('hits')
+    return 'hello world %s times.'  % redis.get('hits')
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True) 
